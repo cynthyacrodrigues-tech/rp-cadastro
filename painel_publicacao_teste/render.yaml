@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: painel-cadastro-empresas-demo
+    runtime: docker
+    plan: free
+    envVars:
+      - key: PAINEL_API_TOKEN
+        generateValue: true
+      - key: PAINEL_DATA_DIR
+        value: /app/data
+    healthCheckPath: /
